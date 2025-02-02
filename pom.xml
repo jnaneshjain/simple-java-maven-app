@@ -55,8 +55,18 @@
           <execution>
             <id>enforce-maven</id>
             <goals>
-              <goal>skip</goal>
+              <goal>enforce</goal>
             </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>[3.8.7,)</version>
+                </requireMavenVersion>
+                <requireJavaVersion>
+                  <version>[17,)</version>
+                </requireJavaVersion>
+              </rules>
+            </configuration>
           </execution>
         </executions>
       </plugin>
